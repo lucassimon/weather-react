@@ -20,7 +20,7 @@ function* weatherByCityFlow() {
 
   console.log(payload)
   const api_key = 'ebd9e2b26ca494600b10493872f2fe0d'
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${api_key}`
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${payload.city}&appid=${api_key}`
 
   yield url
   yield put(startWeatherForm())
