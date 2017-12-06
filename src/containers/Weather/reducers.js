@@ -89,11 +89,13 @@ const weatherData = (state = intialWeatherData, action) => {
         coord: action.payload.coord,
         weather: action.payload.weather.map((i) => ({
           id: i.id,
-          email: i.email,
-          trade_name: i.trade_name
+          main: i.main,
+          description: i.description,
+          icon: i.icon
         })),
         base: action.payload.base,
         main: action.payload.main,
+        visibility: action.payload.visibility,
         wind: action.payload.wind,
         clouds: action.payload.clouds,
         rain: action.payload.rain,
