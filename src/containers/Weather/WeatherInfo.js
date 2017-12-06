@@ -8,9 +8,15 @@ import {
 
 const WeatherInfo = (props) => {
 
+  let country = ''
+
+  if (props.weather.sys.country) {
+    country = `, ${props.weather.sys.country}`
+  }
+
   return (
     <div>
-      <h2 data-cod={ props.weather.cod } data-id={ props.weather.id }> Cidade: { props.weather.name }</h2>
+      <h2 data-cod={ props.weather.cod } data-id={ props.weather.id }> Cidade: { props.weather.name }{ country }</h2>
       <h3> Coordernadas </h3>
       <p>
         Longitude: { props.weather.coord.lon }  <br />
@@ -19,14 +25,23 @@ const WeatherInfo = (props) => {
       <h3>
         Clima
       </h3>
-      { props.weather.weather.map((i) => ({
-        <p key={i.id}> AUHSd </p>
-      }))}
+      {
+        props.weather.weather.map((i) => (
+          <p key={i.id}>
+            {i.main} <br />
+            {i.description} <br />
+            {i.icon} ** TODO: Precisa instalar o weathericons
+          </p>
+        ))
+      }
       <h3>
         Base
       </h3>
+      <p>
+        { props.weather.base }
+      </p>
       <h3>
-        Principal
+        Principal ** TODO: Descobrir como retorna em celsius
       </h3>
       <p>
         Temperatura atual: { props.weather.main.temp } <br />
@@ -52,6 +67,9 @@ const WeatherInfo = (props) => {
       <h3>
         Núvens
       </h3>
+      <p>
+        {props.weather.clouds.all}
+      </p>
     </div>
   )
 }
