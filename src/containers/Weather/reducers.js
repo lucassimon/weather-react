@@ -7,7 +7,7 @@ import {
   WEATHER_DATA
 } from './actions'
 
-const intialWheaterForm = {
+const intialWeatherForm = {
   city: '',
   error: false,
   errors: '',
@@ -15,7 +15,7 @@ const intialWheaterForm = {
 }
 
 
-const wheaterForm = (state = intialWheaterForm, action) => {
+const weatherForm = (state = intialWeatherForm, action) => {
 
   switch (action.type) {
 
@@ -59,7 +59,7 @@ const wheaterForm = (state = intialWheaterForm, action) => {
 }
 
 
-const intialWheaterData = {
+const intialWeatherData = {
   coord: {},
   weather: [],
   base: "",
@@ -78,7 +78,7 @@ const intialWheaterData = {
 }
 
 
-const wheaterData = (state = intialWheaterData, action) => {
+const weatherData = (state = intialWeatherData, action) => {
 
   switch (action.type) {
 
@@ -111,4 +111,4 @@ const wheaterData = (state = intialWheaterData, action) => {
 }
 
 
-export default { wheaterForm, wheaterData }
+export default { weatherForm, weatherData }

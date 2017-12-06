@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import WeatherForms from './WeatherForm'
+import WeatherInfo from './WeatherInfo'
 
 
 const Weather = (props) => {
@@ -13,6 +14,7 @@ const Weather = (props) => {
         <NavLink to="/"> Home </NavLink>
       </p>
       <WeatherForms />
+      <WeatherInfo />
     </div>
   )
 }

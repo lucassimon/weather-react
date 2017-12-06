@@ -12,8 +12,8 @@ const routeMiddleware = routerMiddleware(history)
 
 const rootReducer = combineReducers({
   route: routerReducer,
-  weatherForm: weatherReducers.wheaterForm,
-  wheaterData: weatherReducers.wheaterData
+  weatherForm: weatherReducers.weatherForm,
+  weatherData: weatherReducers.weatherData
 })
 
 const sagaMiddleware = createSagaMiddleware()
