@@ -27,7 +27,7 @@ const WeatherForm = (props) => {
         onChange={props.onHandleChange}
       />
 
-      <button> Login </button>
+      <button> Buscar </button>
       { props.weatherForm.loading &&
         <p> Carregando...</p>
       }
