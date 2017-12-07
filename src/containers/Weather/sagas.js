@@ -18,7 +18,7 @@ function* weatherByCityFlow() {
   const payload = {}
   payload.city = weatherForm.city
 
-  console.log(payload)
+  // TODO: Hide sensitive data
   const api_key = 'ebd9e2b26ca494600b10493872f2fe0d'
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${payload.city}&appid=${api_key}`
 
